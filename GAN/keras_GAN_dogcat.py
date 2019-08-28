@@ -71,10 +71,12 @@ g = G_model(Height=img_h, Width=img_w, channel=3)
 d = D_model(Height=img_h, Width=img_w, channel=3)
 c = Combined_model(g=g, d=d)
 
+# 最適化関数を定義(Adam)
 g_opt = keras.optimizers.Adam(lr=0.0002, beta_1=0.5)
 d_opt = keras.optimizers.Adam(lr=0.0002, beta_1=0.5)
 
 g.compile(loss='binary_crossentropy', optimizer='SGD')
+# trainable=Falseでdを訓練しないようにする
 d.trainable = False
 for layer in d.layers:
     layer.trainable = False
