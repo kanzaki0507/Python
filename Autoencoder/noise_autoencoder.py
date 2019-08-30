@@ -62,3 +62,5 @@ def showOrigDec(orig, noise, num=10):
 plt.show()
 
 showOrigDec(x_train, x_train_noisy)
+showOrigDec(x_train[100:], x_train_noisy[100:])
+showOrigDec(x_train[200:], x_train_noisy[200:])
