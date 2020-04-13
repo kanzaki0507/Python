@@ -22,16 +22,3 @@ elif int(seireki) < 2019:
 
 else:
     print("令和" + str(int(seireki)-2018) + "年")
-
-
-"""
-if (int(seireki) == 1868):
-    print("明治元年")
-elif (int(seireki) > 1868) and (int(seireki) < 1912):
-    print("明治" + str(int(seireki) - 1867) + "年")
-
-if (int(seireki) == 1912):
-    print("大正元年")
-elif (int(seireki) > 1912) and (int(seireki) < 1926):
-    print("大正" + str(int(seireki) - 1911) + "年")
-"""
