@@ -1,16 +1,3 @@
-"""
-data = [6, 15, 4, 2, 8, 5, 11, 9, 7, 13]
-
-for i in range(len(data)):
-    j = i
-
-    while (j > 0) and (data[(j-1)//2] < data[j]):
-        data[(j-1)//2], data[j] = data[j], data[(j-1)//2]
-        j = (j - 1) // 2
-    print(data)
-# print(len(data))
-"""
-
 def min_heapify(array, i):
     left = 2 * i + 1
     right = 2 * i + 2
@@ -46,13 +33,20 @@ def max_heap(data, k):
 
 def sort(data):
 
-        
+    data = data.copy()
+    ## Build Heap Tree
+    for i in reversed(range(len(data)//2)):
+       min_heapify(data, i)
+
+    sort_data = []
+    
+    for _ in range(len(data)):
+        data[0], data[-1] = data[-1], data[0]
+        sort_data.append(data.pop())
+        min_heapify(data, 0)
+        # print(data)
+
+    return print("Heap Sort : " + str(sort_data))
 
 data = [6, 15, 4, 2, 8, 5, 11, 9, 7, 13]
-# k = (len(data)-1) // 2
-
-## Build Heap tree
-for i in reversed(range(len(data)//2)):
-   min_heapify(data, i)
-
-## Heap Sort
+sort(data)
