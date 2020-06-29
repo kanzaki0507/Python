@@ -49,7 +49,7 @@ def shell_sort(data):
     gaps = [5, 3, 1]
     for gap in gaps:
         for i in range(0, len(data), gap):
-            for j in range(i-gap, -1, -gap):
+            for j in range(i-gap, -1, -gap): #"-gap"を"-i"にしたらうまく動かない
                 print("i:{} j:{} j+gaps:{} data[j]={} data[j+gap]={}".format(i, j, j+gap, data[j], data[j+gap]))
                 if data[j] > data[j+gap]:
                     data[j], data[j+gap] = data[j+gap], data[j]

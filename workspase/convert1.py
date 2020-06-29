@@ -1,16 +1,23 @@
 target = 49
-amari = []
+amari1 = []
+amari2 = []
+amari3 = []
 
 while target != 0:
-    amari.append(target % 2)
+    amari1.append(target % 2)
     target = target // 2
 
-amari.reverse()
-print(amari)
+amari1.reverse()
+print(amari1)
 
-"""
-for i in range(a // 2 > 0):
-    a = a // 2
-    b = a % 2
-    print(str(b))
-"""
+while target != 0:
+    amari2.append(target % 8)
+    target = target // 8
+amari2.reverse()
+print(amari2)
+
+while target != 0:
+    amari3.append(target % 16)
+    target = target // 16
+amari3.reverse()
+print(amari3)

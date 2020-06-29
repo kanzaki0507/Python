@@ -1,11 +1,9 @@
 import sys
 
 seireki = input('西暦を入力してください:')
-if not seireki:
-    print('整数を入力して下さい')
-    sys.exit()
 
 if int(seireki) < 1868:
+    # print('整数を入力して下さい')
     sys.exit()
 
 elif int(seireki) < 1912:
